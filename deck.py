@@ -41,9 +41,12 @@ class Deck(object):
     attributes:
         deck: list of cards in the deck with 0 is the index of the top card.
     """
-    def __init__(self,cards):
+    def __init__(self,cards=None):
         """construct a Deck object with container containing Card objects as .deck"""
-        self.deck = list(cards)
+        if cards != None:
+            self.deck = list(cards)
+        else:
+            cards = []
         
     def cards_in_deck(self):
         return len(self.deck)
