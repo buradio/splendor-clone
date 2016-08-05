@@ -46,7 +46,7 @@ class Deck(object):
         if cards != None:
             self.deck = list(cards)
         else:
-            cards = []
+            self.deck = []
         
     def cards_in_deck(self):
         return len(self.deck)

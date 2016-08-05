@@ -1,5 +1,14 @@
 import deck
 
+def load_card_data(name,data):
+    """
+        data format
+        gemcolor,victory_points,white,blue,green,red,black
+    """
+    costdata = CostData(data[5],data[4],data[6],data[3],data[2])
+    c = Splendor_card(name,costdata,data[0],int(data[1]))
+    return c
+
 class CostData:
     def __init__(self,red_cost,green_cost,black_cost,blue_cost,white_cost):
         self.red_cost = red_cost
