@@ -1,11 +1,11 @@
 import random
 
-class Player():
+class Player(object):
     def __init__(self,name):
         self.name = name
         self.hand = Hand()
 
-class Hand():
+class Hand(object):
     """
     Hand is a list of cards in a player's hand
     
@@ -13,9 +13,12 @@ class Hand():
         cards: list of cards in hand
     """
     
-    def __init__(self,cards):
+    def __init__(self,cards=None):
         """construct a Hand object from cards"""
-        self.cards = list(cards)
+        if cards != None:
+            self.cards = list(cards)
+        else:
+            self.cards = []
     def number_of_cards(self):
         """returns total number of cards in hand"""
         return len(self.cards)

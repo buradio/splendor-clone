@@ -1,4 +1,4 @@
-import player_hand as pl
+import player_hand
 
 def gem_l2d(l):
     d = {}
@@ -38,7 +38,7 @@ class Token_pool:
     def aslist(self):
         return [self.red,self.green,self.black,self.blue,self.white,self.joker]
 
-class Splendor_player(pl.Player):
+class Splendor_player(player_hand.Player):
     def __init__(self,name):
         super(Splendor_player,self).__init__(name)
         self.tokens = Token_pool()
