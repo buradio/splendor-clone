@@ -22,6 +22,7 @@ class Game():
         
         self.screen = pygame.display.set_mode(self.DISPLAY_SIZE)
         pygame.display.set_caption(self.TITLE)
+        pygame.display.set_icon(render.loadImg('icon.png'))
         self.phase = 'StartMenu'
         self.clock = pygame.time.Clock()
         self.running = True
