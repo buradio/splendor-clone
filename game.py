@@ -1,6 +1,7 @@
 #! python2
 import pygame
 import render
+import gamelogic
 
 """
     game.py is the main file to create pygame window
@@ -10,7 +11,7 @@ import render
 """
 
 
-class Game():
+class Game:
 
     #constants
     DISPLAY_SIZE = DISPLAY_WIDTH,DISPLAY_HEIGHT = 800,600
@@ -26,6 +27,7 @@ class Game():
         self.phase = 'StartMenu'
         self.clock = pygame.time.Clock()
         self.running = True
+        self.gl = gamelogic.Gamelogic(4)
         
 
     def loop(self):

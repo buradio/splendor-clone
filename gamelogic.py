@@ -11,7 +11,7 @@ def loadcards(filename):
     print("loaded "+str(len(t))+" cards from "+filename)
     return t
 
-class gamelogic:
+class Gamelogic:
     def __init__(self,number_of_players):
         #initialize players
         self.player = []
